@@ -127,3 +127,18 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+.Rhistory
+.Rproj.user
+*.Rproj
+.RData
+ 
+**/.ipynb_checkpoints
+**/.DS_Store
+**/Icon
+**/__pycache__
+ 
+**/_HIDE
+**/hidden
+**/tmp
+**/Untitled*.ipynb
