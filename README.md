@@ -21,20 +21,100 @@ d) python setup.py develop
 
 To import, you must include the following lines at the beginning of the file:
 
-from montecarlo.montecarlo import Die
-from montecarlo.montecarlo import Game
-from montecarlo.montecarlo import Analyzer
+from montecarlo import Die
+from montecarlo import Game
+from montecarlo import Analyzer
 
 These lines go into the montecarlo folder in the repo, then into the montecarlo.py file which has all of the methods, and grabs the methods. The methods are then usable in your notebook. 
+
+Upon successful importing, you should receive a printed message: 'You have successfully installed the Monte Carlo modules'
 
 
 ## Creating Dice:
 
+Example init: 
+test_die = Die([1,2,3,4,5,6])
+Then:
+test_die.weightslist = [1, 1, 1, 1, 1, 1]
+test_die.die = 
+|   | face | weights |
+|---|------|---------|
+| 0 | 1    | 1       |
+| 1 | 2    | 1       |
+| 2 | 3    | 1       |
+| 3 | 4    | 1       |
+| 4 | 5    | 1       |
+| 5 | 6    | 1       |
+
+change_weight method:
+test_die.change_weight(2,5)
+Then: 
+test_die.weightslist = [1, 5, 1, 1, 1, 1]
+
+play_game method:
+test_die.play_game(3)
+Output:
+[2, 5, 2]
+
+display_dice method:
+test_die.display_dice()
+Output:
+|   | face | weights |
+|---|------|---------|
+| 0 | 1    | 1       |
+| 1 | 2    | 5       |
+| 2 | 3    | 1       |
+| 3 | 4    | 1       |
+| 4 | 5    | 1       |
+| 5 | 6    | 1       |
+
 ## Playing Games:
+
+
+Example init: 
+test_die1 = Die([1,2,3])
+test_game = Game([test_die1, test_die2, test_die3])
+
+play_the_game method:
+test_game.play_the_game(3)
+
+Output:
+| Roll Number | Die 1 | Die 2 | Die 3 |
+|-------------|-------|-------|-------|
+| 1           | 2     | 1     | 3     |
+| 2           | 3     | 2     | 3     |
+| 3           | 2     | 2     | 2     |
+
+show_df method with width "N":
+test_game.show_df("N")
+
+Output:
+
+| Roll Number |       | Face Rolled |
+|-------------|-------|-------------|
+| 1           | Die 1 | 2           |
+|             | Die 2 | 1           |
+|             | Die 3 | 3           |
+| 2           | Die 1 | 3           |
+|             | Die 2 | 2           |
+|             | Die 3 | 3           |
+| 3           | Die 1 | 2           |
+|             | Die 2 | 2           |
+|             | Die 3 | 2           |
 
 ## Analyzing Games:
 
+Example init:
+test_analyzer = Analyzer(test_game)
 
+jackpot method (testing the above game shown in Game.show_df()):
+test_analyzer.jackpot()
+| Roll Number | Die 1 | Die 2 | Die 3 |
+|-------------|-------|-------|-------|
+| 3           | 2     | 2     | 2     |
+
+combos method:
+test_analyzer.combos()
 
 
 # API Description

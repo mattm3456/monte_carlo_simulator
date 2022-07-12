@@ -181,6 +181,10 @@ class Analyzer():
         combos_rolls2 = pd.DataFrame(Play.value_counts())
         combos_rolls2.columns =['Number of Occurences']
         combos_rolls2.apply(Counter, axis='columns').value_counts()
+        combonations = Play.apply(lambda x: pd.Series(sorted(x)), 1)\
+ .value_counts()\
+ .to_frame('n')
+        self.combonations = combonations
         self.combinations = combos_rolls2
 
     def counts_per_roll(self):
