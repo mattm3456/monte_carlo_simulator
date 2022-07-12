@@ -198,3 +198,11 @@ counts_per_roll gives another dataframe of the played game results. This one wil
 
 # Manifest
 
+Repo link: https://github.com/mattm3456/monte_carlo_simulator
+Inside the repo, titled monte_carlo_simulator, the following files:
+
+LICENSE					montecarlo
+README.md				montecarlo.egg-info
+__pycache__				montecarlo_demo.ipynb
+build					project_unit_testing_results.txt
+dist					setup.py
