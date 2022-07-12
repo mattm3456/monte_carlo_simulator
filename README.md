@@ -116,6 +116,23 @@ test_analyzer.jackpot()
 combos method:
 test_analyzer.combos()
 
+test_analyzer.permutations = 
+| 0 | 1 | 2 | n |
+|---|---|---|---|
+| 1 | 2 | 3 | 1 |
+| 2 | 3 | 3 | 1 |
+| 2 | 2 | 2 | 1 |
+
+counts_per_roll method:
+test_analyzer.counts_per_roll()
+
+Output:
+| Roll Number | 1   | 2   | 3   |
+|-------------|-----|-----|-----|
+| 1           | 1.0 | 1.0 | 1.0 |
+| 2           | 0.0 | 1.0 | 2.0 |
+| 3           | 0.0 | 3.0 | 0.0 |
+
 
 # API Description
 
@@ -173,7 +190,7 @@ jackpot returns two outputs: a dataframe and an integer. The dataframe, self.jac
         
         
 combos returns the unique permutations present in your rolls, ordered by frequency. It considers order, meaning that if you roll 5 dice with a result of 1-2-3-4-5, that is considered different than 5-4-3-2-1. 
-        The output of this will be a multi-index dataframe, with each Die as an index. The value for each die will appear in the index columns for each row, and the data column will be the number of occurences for that permutation of die faces rolled.
+        The output of this will be a multi-index dataframe, with each Die as an index. The value for each die will appear in the index columns for each row, and the data column will be the number of occurences for that combination of die faces rolled. self.permutations will provide the number of combinations while taking order into consideration.
     
     
 counts_per_roll gives another dataframe of the played game results. This one will have each face present in the die set as a column, the roll number as an index, and the number of times each face appears in the roll as the value.
