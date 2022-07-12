@@ -201,14 +201,23 @@ counts_per_roll gives another dataframe of the played game results. This one wil
 Repo link: https://github.com/mattm3456/monte_carlo_simulator
 Inside the repo, titled monte_carlo_simulator, the following files:
 
-total 144
 LICENSE
+
 .gitignore
+
 README.md
+
 montecarlo_demo.ipynb
+
 project_unit_testing_results.txt
+
 setup.py
+
 montecarlo
+
     __init__.py
+    
     montecarlo.py
+    
     montecarlo_tests.py
+    
