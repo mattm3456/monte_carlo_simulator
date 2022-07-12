@@ -202,56 +202,13 @@ Repo link: https://github.com/mattm3456/monte_carlo_simulator
 Inside the repo, titled monte_carlo_simulator, the following files:
 
 total 144
--rw-r--r--  1 mattmanner  staff   1066 Jul 11 22:46 LICENSE
--rw-r--r--@ 1 mattmanner  staff   7426 Jul 12 17:32 README.md
-drwxr-xr-x@ 5 mattmanner  staff    160 Jul 12 09:01 __pycache__
-drwxr-xr-x@ 4 mattmanner  staff    128 Jul 12 11:19 build
-drwxr-xr-x@ 3 mattmanner  staff     96 Jul 12 11:18 dist
-drwxr-xr-x@ 7 mattmanner  staff    224 Jul 12 17:24 montecarlo
-drwxr-xr-x@ 7 mattmanner  staff    224 Jul 12 11:18 montecarlo.egg-info
--rw-r--r--  1 mattmanner  staff  50758 Jul 11 17:20 montecarlo_demo.ipynb
--rw-r--r--@ 1 mattmanner  staff   1026 Jul 11 16:34 project_unit_testing_results.txt
--rw-r--r--@ 1 mattmanner  staff    380 Jul 12 17:33 setup.py
-
-./__pycache__:
-total 56
--rw-r--r--  1 mattmanner  staff  4181 Jul 11 16:01 Die11Jul.cpython-39.pyc
--rw-r--r--  1 mattmanner  staff  4192 Jul 11 16:23 Monte_Carlo_Classes.cpython-39.pyc
--rw-r--r--  1 mattmanner  staff  8304 Jul 12 09:01 montecarlo.cpython-39.pyc
-
-./build:
-total 0
-drwxr-xr-x@ 2 mattmanner  staff  64 Jul 12 11:18 bdist.macosx-10.9-x86_64
-drwxr-xr-x@ 3 mattmanner  staff  96 Jul 12 11:19 lib
-
-./build/bdist.macosx-10.9-x86_64:
-total 0
-
-./build/lib:
-total 0
-drwxr-xr-x@ 5 mattmanner  staff  160 Jul 12 11:19 montecarlo
-
-./build/lib/montecarlo:
-total 48
--rw-r--r--  1 mattmanner  staff    64 Jul 12 09:16 __init__.py
--rw-r--r--  1 mattmanner  staff  8267 Jul 11 18:15 montecarlo.py
--rw-r--r--  1 mattmanner  staff  4314 Jul 11 17:20 montecarlo_tests.py
-
-./dist:
-total 24
--rw-r--r--  1 mattmanner  staff  10975 Jul 12 11:17 montecarlo-1.0.0-py3.9.egg
-
-./montecarlo:
-total 48
--rw-r--r--@ 1 mattmanner  staff   109 Jul 12 11:41 __init__.py
--rw-r--r--@ 1 mattmanner  staff  8412 Jul 12 17:33 montecarlo.py
--rw-r--r--@ 1 mattmanner  staff  4314 Jul 11 17:20 montecarlo_tests.py
-
-./montecarlo.egg-info:
-total 40
--rw-r--r--  1 mattmanner  staff  267 Jul 12 11:17 PKG-INFO
--rw-r--r--  1 mattmanner  staff  274 Jul 12 11:17 SOURCES.txt
--rw-r--r--  1 mattmanner  staff    1 Jul 12 11:17 dependency_links.txt
--rw-r--r--  1 mattmanner  staff   43 Jul 12 11:17 requires.txt
--rw-r--r--  1 mattmanner  staff   11 Jul 12 11:17 top_level.txt
-(base) mattmanner@Matts-MacBook-Air monte_carlo_simulator % 
+LICENSE
+.gitignore
+README.md
+montecarlo_demo.ipynb
+project_unit_testing_results.txt
+setup.py
+montecarlo
+    __init__.py
+    montecarlo.py
+    montecarlo_tests.py
