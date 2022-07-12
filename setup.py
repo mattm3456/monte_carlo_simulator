@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 setup(
     name='montecarlo',
     version='1.0.0',
-    url='https://github.com/mattm3456/FIX THIS IN A MINUTE',
+    url='https://github.com/mattm3456/monte_carlo_simulator',
     author='Matt Manner',
     author_email='xkv3na@virginia.edu',
     description='Final Project Classes',
