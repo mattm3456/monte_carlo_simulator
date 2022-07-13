@@ -14,7 +14,8 @@ class DieTestSuite(unittest.TestCase):
         TestDie1.change_weight(3, 10)
         actual = TestDie1.weightslist
         expected = [1,1,10,1,1,1]
-        self.assertEqual(actual, expected)
+        message = "Test failed: weight change didn't work properly !"
+        self.assertEqual(actual, expected, message)
     
     def test_2_play_game(self):
         '''
@@ -29,18 +30,20 @@ class DieTestSuite(unittest.TestCase):
         TestDie1.play_game(5)
         actual = TestDie1.play_game(5)
         expected = [1,1,1,1,1]
-        self.assertEqual(actual, expected)
+        message = "Gameplay didn't work properly !"
+        self.assertEqual(actual, expected, message)
         
         
     def test_3_display_dice(self):
         '''
-        Tests the display_dice method, to confirm that die dataframe is made as expected.
+        Tests the display_dice method, to confirm that die dictionary is made as expected.
         '''
         TestDie1 = Die([1,2,3,4,5,6])
         TestDie1.display_dice()
         actual = TestDie1.die
         expected = {'face':[1,2,3,4,5,6], 'weights': [1,1,1,1,1,1]}
-        self.assertEqual(actual, expected)
+        message = "Die dictionary not made properly!"
+        self.assertEqual(actual, expected, message)
         
 ###########################        
 class GameTestSuite(unittest.TestCase):
@@ -57,7 +60,8 @@ class GameTestSuite(unittest.TestCase):
         Testdf = pd.DataFrame({'Roll Number':[1,2,3,4,5], 'Die 1': [1,1,1,1,1], 'Die 2': [2,2,2,2,2], 'Die 3':[3,3,3,3,3]})
         Testdf = Testdf.set_index("Roll Number")
         expected = Testdf.values.tolist()
-        self.assertEqual(actual, expected)
+        message = "Gameplay method not working properly !"
+        self.assertEqual(actual, expected, message)
     
     def test_2_show_df_W(self):
         '''
@@ -72,7 +76,8 @@ class GameTestSuite(unittest.TestCase):
         Testdf = pd.DataFrame({'Roll Number':[1,2,3,4,5], 'Die 1': [1,1,1,1,1], 'Die 2': [2,2,2,2,2], 'Die 3':[3,3,3,3,3]})
         Testdf = Testdf.set_index("Roll Number")
         expected = Testdf.values.tolist()
-        self.assertEqual(actual, expected)
+        message = "Gameplay dataframe creation error"
+        self.assertEqual(actual, expected, message)
         
     def test_3_show_df_N(self):
         '''
@@ -86,7 +91,8 @@ class GameTestSuite(unittest.TestCase):
         actual = TestGame.show_df("N").values.tolist()
         testlist = [[1],[2],[3]]
         expected = testlist * 5
-        self.assertEqual(actual, expected)    
+        message = "Converting to narrow dataframe error!"
+        self.assertEqual(actual, expected, message)    
 
 #####################
 class AnalyzerTestSuite(unittest.TestCase):
@@ -103,7 +109,8 @@ class AnalyzerTestSuite(unittest.TestCase):
         TestAnalyzer.jackpot()
         actual = TestAnalyzer.number_of_jackpots
         expected = 5
-        self.assertEqual(actual, expected)
+        message = "Jackpots not properly running"
+        self.assertEqual(actual, expected, message)
 
     def test_2_combinations(self):
         '''
@@ -118,7 +125,8 @@ class AnalyzerTestSuite(unittest.TestCase):
         TestAnalyzer.combos()
         actual = TestAnalyzer.combinations.values.tolist()
         expected = [[5]]
-        self.assertEqual(actual, expected)
+        message = "Not properly calculating combinations!"
+        self.assertEqual(actual, expected, message)
         
     def test_3_values_per_roll(self):
         '''
@@ -133,7 +141,8 @@ class AnalyzerTestSuite(unittest.TestCase):
         TestAnalyzer.counts_per_roll()
         actual = TestAnalyzer.counts_table.values.tolist()
         expected = pd.DataFrame({"Roll Number":[1,2,3,4,5], "1":[3,3,3,3,3]}).set_index("Roll Number").values.tolist()
-        self.assertEqual(actual, expected)
+        message = "Not properly calculating values for each roll !"
+        self.assertEqual(actual, expected, message)
         
 if __name__ == '__main__':
     
