@@ -7,8 +7,9 @@ from montecarlo import Analyzer
 
 class DieTestSuite(unittest.TestCase):
     def test_1_change_weight(self): 
-        # Change a die's weights and confirm that it worked properly
-        # add a book and test if it is in `book_list`.
+         '''
+        tests whether the change_weight function works. Changes weight #3 in a test die to 10. Confirms that resulting weights_list is [1,1,10,1,1,1]
+        '''
         TestDie1 = Die([1,2,3,4,5,6])
         TestDie1.change_weight(3, 10)
         actual = TestDie1.weightslist
@@ -16,6 +17,9 @@ class DieTestSuite(unittest.TestCase):
         self.assertEqual(actual, expected)
     
     def test_2_play_game(self):
+        '''
+        Tests the play_game method by setting all weights except face #1 to 0. This means that all rolls will result in a value of 1. Playing the game 5 times should result in a games outcome list of [1,1,1,1,1].
+        '''
         TestDie1 = Die([1,2,3,4,5,6])
         TestDie1.change_weight(2,0)
         TestDie1.change_weight(3,0)
@@ -29,6 +33,9 @@ class DieTestSuite(unittest.TestCase):
         
         
     def test_3_display_dice(self):
+        '''
+        Tests the display_dice method, to confirm that die dataframe is made as expected.
+        '''
         TestDie1 = Die([1,2,3,4,5,6])
         TestDie1.display_dice()
         actual = TestDie1.die
@@ -37,7 +44,9 @@ class DieTestSuite(unittest.TestCase):
 import unittest
 class GameTestSuite(unittest.TestCase):
     def test_1_play_the_game_and_show(self): 
-        # Play a game and check to see if you get a dataframe in return
+        '''
+        Plays a game and confirms that output is in proper format. Converts the outcome dataframe to a list and compares against a hard-coded analogous list.
+        '''
         TestDie1 = Die([1])
         TestDie2 = Die([2])
         TestDie3 = Die([3])
@@ -50,6 +59,9 @@ class GameTestSuite(unittest.TestCase):
         self.assertEqual(actual, expected)
     
     def test_2_show_df_W(self):
+        '''
+        Shows a dataframe converted to list format as in previous test.
+        '''
         TestDie1 = Die([1])
         TestDie2 = Die([2])
         TestDie3 = Die([3])
@@ -62,6 +74,9 @@ class GameTestSuite(unittest.TestCase):
         self.assertEqual(actual, expected)
         
     def test_3_show_df_N(self):
+        '''
+        Similar to test_3_show_df_W, but uses a narrow DataFrame to make the list.
+        '''
         TestDie1 = Die([1])
         TestDie2 = Die([2])
         TestDie3 = Die([3])
@@ -76,7 +91,9 @@ class GameTestSuite(unittest.TestCase):
 import unittest
 class AnalyzerTestSuite(unittest.TestCase):
     def test_1_number_of_jackpots(self): 
-        # Play a game and check to see if you get a dataframe in return
+        '''
+        Initializes a Game and Analyzer with 3 Die with only 1 face each. Should roll a Jackpot every roll, so this test confirms that.
+        '''
         TestDie1 = Die([1])
         TestDie2 = Die([1])
         TestDie3 = Die([1])
@@ -89,6 +106,9 @@ class AnalyzerTestSuite(unittest.TestCase):
         self.assertEqual(actual, expected)
 
     def test_2_combinations(self):
+        '''
+        This test confirms that every roll of 3 equivalent single-faced dice returns the same combination. The expected outcome of the TestAnalyzer is a dataframe of 1 combination, 5 times.
+        '''
         TestDie1 = Die([1])
         TestDie2 = Die([1])
         TestDie3 = Die([1])
@@ -101,6 +121,9 @@ class AnalyzerTestSuite(unittest.TestCase):
         self.assertEqual(actual, expected)
         
     def test_3_values_per_roll(self):
+        '''
+        test_3_values_per_roll confirms the counts_per_roll method in the Analyzer class. Checks that there is one column for the one existing face (1), and that all 3 dice rolled 1 for each roll.
+        '''
         TestDie1 = Die([1])
         TestDie2 = Die([1])
         TestDie3 = Die([1])
