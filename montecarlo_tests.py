@@ -43,7 +43,6 @@ class DieTestSuite(unittest.TestCase):
         self.assertEqual(actual, expected)
         
 ###########################        
-import unittest
 class GameTestSuite(unittest.TestCase):
     def test_1_play_the_game_and_show(self): 
         '''
@@ -90,7 +89,6 @@ class GameTestSuite(unittest.TestCase):
         self.assertEqual(actual, expected)    
 
 #####################
-import unittest
 class AnalyzerTestSuite(unittest.TestCase):
     def test_1_number_of_jackpots(self): 
         '''
