@@ -40,6 +40,8 @@ class DieTestSuite(unittest.TestCase):
         TestDie1.display_dice()
         actual = TestDie1.die
         expected = {'face':[1,2,3,4,5,6], 'weights': [1,1,1,1,1,1]}
+        self.assertEqual(actual, expected)
+        
 ###########################        
 import unittest
 class GameTestSuite(unittest.TestCase):
