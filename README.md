@@ -218,7 +218,7 @@ project_unit_testing_results.txt
 
 setup.py
 
-montecarlo
+/montecarlo
 
     __init__.py
     
