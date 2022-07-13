@@ -13,8 +13,11 @@ To install the package, you must be in the repo.
 To install, enter one of the following:
 
 a) pip install . 
+
 b) pip install -e . 
+
 c) python setup.py install 
+
 d) python setup.py develop
 
 ## Importing:
@@ -22,7 +25,9 @@ d) python setup.py develop
 To import, you must include the following lines at the beginning of the file:
 
 from montecarlo import Die
+
 from montecarlo import Game
+
 from montecarlo import Analyzer
 
 These lines go into the montecarlo folder in the repo, then into the montecarlo.py file which has all of the methods, and grabs the methods. The methods are then usable in your notebook. 
