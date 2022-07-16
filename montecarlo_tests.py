@@ -7,7 +7,7 @@ from montecarlo import Analyzer
 
 class DieTestSuite(unittest.TestCase):
     def test_1_change_weight(self): 
-         '''
+        '''
         tests whether the change_weight function works. Changes weight #3 in a test die to 10. Confirms that resulting weights_list is [1,1,10,1,1,1]
         '''
         TestDie1 = Die([1,2,3,4,5,6])
